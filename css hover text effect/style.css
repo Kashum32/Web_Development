@@ -1,0 +1,74 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #191919;
+}
+@property --a 
+{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+.text{
+    position: relative;
+    text-decoration: none;
+    padding: 20px 30px;
+    background: repeating-conic-gradient(from var(--a), var(--clr1) 0%, var(--clr1) 5%, transparent 5%, transparent 40%, var(--clr1) 100%);
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        --a: 0deg;
+    }
+    100%
+    {
+        --a: 360deg;
+    }
+}
+.text::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), var(--clr2) 0%, var(--clr2) 5%, transparent 5%, transparent 40%, var(--clr2) 50%);
+    animation: animate 2s linear infinite;
+    animation-delay: -0.5s;
+    transition: 0.5s; 
+}
+
+.text::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #191919;
+}
+.text span{
+    position: relative;
+    font-size: 1.8em;
+    z-index: 10;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 5px var(--clr1);
+    font-weight: 500;
+    transition: 0.5s;
+}
+.text:hover span{
+    letter-spacing: 0.35em;
+    color: var(--clr2);
+    text-shadow: 0 0 5px var(--clr2);
+}
