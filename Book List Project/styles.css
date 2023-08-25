@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #121328;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 80%;
+    height: 600px;
+    padding: 30px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #fff;
+    background: #0e69fb;
+}
+
+#book-form{
+    flex: 1 1 20rem;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px #fff;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.table{
+    flex: 1 1 20rem;
+    width: 100%;
+    background: #fdbe1f;
+    color: #121328;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+
+label{
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.btn{
+    padding: 12px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    background: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn:hover{
+    color: #fff;
+    background: #a80ad8;
+}
+
+.table-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border: 1px solid #121328;
+    padding: 10px 0;
+}
+
+#book-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    background: #fff;
+    color: #121328;
+    font-weight: 500;
+}
+
+#book-list > section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #121328;
+    padding: 10px 0;
+    overflow: hidden;
+    text-align: justify;
+}
