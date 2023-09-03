@@ -1,0 +1,5 @@
+0. xampp installation
+1. Create Project Structure & Include the Main Required Files
+2. adding tools and libraries
+3. Create & Test Languages Files
+4. Create A Database & Connect To Database

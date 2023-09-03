@@ -1,0 +1,112 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    background: #1c203a;
+}
+
+.cup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 160px;
+    background: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.4),
+    0 0 20px rgba(255,255,255,0.4),
+    0 0 50px rgba(255,255,255,0.4);
+}
+
+.cup::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    border-radius: 50%;
+    background: #fb8a09;
+    border: 7px solid #fff;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px rgba(255,255,255,0.4),
+    0 0 20px rgba(255,255,255,0.4),
+    0 0 50px rgba(255,255,255,0.4);
+}
+
+.cup::after{
+    content: '';
+    position: absolute;
+    top: 48%;
+    right: -40%;
+    height: 90px;
+    width: 80px;
+    background: transparent;
+    border: 12px solid #fff;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255,255,255,0.4),
+    0 0 20px rgba(255,255,255,0.4),
+    0 0 50px rgba(255,255,255,0.4);
+}
+
+.plate{
+    width: 250px;
+    height: 30px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: #fff;
+    position: absolute;
+    top: 161px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(255,255,255,0.4),
+    0 0 20px rgba(255,255,255,0.4),
+    0 0 50px rgba(255,255,255,0.4);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -50px;
+    transform: translateX(10%);
+    width: 100%;
+    background: transparent;
+}
+
+ul li{
+    list-style: none;
+    width: 2px;
+    height: 40px;
+    background: #fff;
+    float: left;
+    margin: 9px;
+    animation: animate 2s linear infinite;
+}
+
+ul li:nth-child(even){
+    animation-delay: -1.5s;
+}
+
+ul li:nth-child(odd){
+    animation-delay: -3s;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(2px);
+    }
+
+    100%{
+        transform: translateY(-80px);
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
